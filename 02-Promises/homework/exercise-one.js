@@ -76,13 +76,13 @@ function problemB () {
   // promise version
   promisifiedReadFile("poem-one/stanza-02.txt")
     .then((stanza2) => {
-      console.log(stanza2)
+      
       blue(stanza2);
     })
 
   promisifiedReadFile("poem-one/stanza-03.txt")
     .then((stanza3) => {
-      console.log(stanza3);
+      
       blue(stanza3);
     });
 
@@ -113,13 +113,13 @@ function problemC () {
   // promise version (hint: don't need to nest `then` calls)
    promisifiedReadFile("poem-one/stanza-02.txt")
       .then((stanza2) => {
-        console.log(stanza2);
+        
         blue(stanza2);
 
         return promisifiedReadFile("poem-one/stanza-03.txt");
      })
       .then((stanza3) => {
-        console.log(stanza3);
+        
         blue(stanza3);
 
         return console.log("done");
@@ -145,7 +145,7 @@ function problemD () {
   promisifiedReadFile("poem-one/stanza-04.txt")
 
     .then((stanza4) => {
-        console.log(stanza4);
+        
         blue(stanza4);
       }, (error) => magenta(new Error(error)));
 
@@ -175,12 +175,12 @@ function problemE () {
   // promise version
   promisifiedReadFile("poem-one/stanza-03.txt")
     .then((stanza3) => {
-        console.log(stanza3);
+        
         blue(stanza3);
 
         return promisifiedReadFile("poem-one/stanza-04.txt")
           .then((stanza4) => {
-              console.log(stanza4);
+              
               blue(stanza4);
             }, (error) => magenta(new Error(error)));
     })
@@ -220,7 +220,7 @@ function problemF () {
 
         return promisifiedReadFile("poem-one/stanza-04.txt")
           .then((stanza4) => {
-              console.log(stanza4);
+              
               blue(stanza4);
               return console.log("done");
             }, (error) => {
